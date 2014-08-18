@@ -1,0 +1,3 @@
+#bash_prompt
+cowsay -f moose "Welcome back $USER"
+

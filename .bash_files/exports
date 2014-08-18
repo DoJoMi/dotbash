@@ -1,0 +1,17 @@
+#Editors                                                                                                                        
+export EDITOR='vim'
+export PAGER=less
+
+#Language
+LANG=en_US.utf8
+export LANG
+
+#Path
+export PATH=$PATH":$HOME/bin"
+ 
+# Proxy settings
+#IP=""
+#PORT=""
+#export http_proxy='$IP:$PORT'
+#export https_proxy='$IP:$PORT'
+#export ftp_proxy='$IP:$PORT'

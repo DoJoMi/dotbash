@@ -1,0 +1,41 @@
+##########################################
+#ALIAS AND OTHER NEEDED STUFF
+##########################################
+##Fix Typos 
+alias isntall='install'
+
+##########################################
+##Frequently Used Directories 
+##########################################
+alias home='cd ~' 
+alias desktop='cd ~/Desktop' 
+alias downloads='cd ~/Downloads'
+
+##########################################
+##git
+##########################################
+alias ga='git add'
+alias gp='git push'
+alias gl='git log'
+alias gs='git status'
+alias gd='git diff'
+alias gdc='git diff --cached'
+alias gc='git commit'
+alias gcm='git commit -m'
+alias gb='git branch'
+alias gco='git checkout'
+alias gra='git remote add'
+alias grr='git remote rm'
+alias gpl='git pull'
+alias gcl='git clone'
+alias gplo='git pull origin'
+alias gpo='git push origin'
+
+##########################################
+##Other Usefull aliases
+##########################################
+alias bashrc=' vim ~/.bashrc' 
+alias NOW=$(echo date +"%m-%d-%Y")
+
+
+

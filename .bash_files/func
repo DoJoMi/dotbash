@@ -1,0 +1,57 @@
+##########################
+# add your functions here
+# +some examples
+# +show function
+##########################
+
+function show(){
+  echo " "
+  echo "BASHRC FUNCTIONS:"
+  echo " "
+  echo " insapp  -> Installing the applications from app.list"
+  echo " extract -> Extract every archive"
+  echo " mtar    -> Make a new tar file"
+  echo " mzip    -> Make a new zip file"
+  echo " "
+}
+
+
+#install all application from app.list
+function insapp(){
+	echo "$(tput setaf 1)Installing the packages from app.list file..$(tput sgr0)" && cat ~/.install/app.list | xargs sudo apt-get -y install
+}
+
+#extract all
+function extract() {
+  if [ -f $1 ] ; then
+	case $1 in
+		*.tar.bz2) tar xvjf $1 ;;
+		*.tar.gz) tar xvzf $1 ;;
+		*.bz2) bunzip2 $1 ;;
+		*.rar) unrar x $1 ;;
+		*.gz) gunzip $1 ;;
+		*.tar) tar xvf $1 ;;
+		*.tbz2) tar xvjf $1 ;;
+		*.tgz) tar xvzf $1 ;;
+		*.zip) unzip $1 ;;
+		*.Z) uncompress $1 ;;
+		*.7z) 7z x $1 ;;
+		*) echo "'$1' cannot be extracted via >extract<" ;;
+	esac
+  else
+	echo "'$1' is not a valid file!"
+  fi
+}
+
+# creates tar.gz
+function mtar() { 
+  tar cvzf "${1%%/}.tar.gz" "${1%%/}/"; 
+}
+
+# creates zip
+function mzip() {
+ zip -r "${1%%/}.zip" "$1" ; 
+}
+
+
+
