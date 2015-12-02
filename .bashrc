@@ -9,7 +9,7 @@
 shopt -s checkwinsize
 
 #include all files from .bash_files
-for file in ~/.bash_files/*; do
+for file in $HOME/.bash/.bash_files/*; do
   source "$file"
 done
 
