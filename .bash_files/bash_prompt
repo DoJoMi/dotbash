@@ -1,3 +1,4 @@
 #bash_prompt
-cowsay -f moose "Welcome back $USER"
+#not available in CentOS 
+#cowsay -f moose "Welcome back $USER"
 
