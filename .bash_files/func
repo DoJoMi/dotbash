@@ -4,14 +4,18 @@
 # +show function
 ##########################
 
+color() {
+    printf '\033[0;31m%s\033[0m\n' "$1"
+}
+
 function show(){
   echo " "
   echo "BASHRC FUNCTIONS:"
   echo " "
-  echo " insapp  -> Installing the applications from app.list"
-  echo " extract -> Extract every archive"
-  echo " mtar    -> Make a new tar file"
-  echo " mzip    -> Make a new zip file"
+  color " insapp  -> Installing the applications from app.list"
+  color " extract -> Extract every archive"
+  color " mtar    -> Make a new tar file"
+  color " mzip    -> Make a new zip file"
   echo " "
 }
 
