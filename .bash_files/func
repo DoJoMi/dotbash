@@ -19,9 +19,8 @@ function show(){
 
 #install all application from app.list
 function insapp(){
-	echo "$(tput setaf 1)Installing the packages from app.list file..$(tput sgr0)" && cat ~/.install/app.list | xargs sudo apt-get -y install
+	echo "$(tput setaf 1)Installing the packages from app.list file..$(tput sgr0)" && cat ~/.install/app.list | xargs sudo yum -y install
 }
-
 
 
 
