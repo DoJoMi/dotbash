@@ -12,7 +12,7 @@ function show(){
   echo " "
   echo "BASHRC FUNCTIONS:"
   echo " "
-  color " insapp  -> Installing the applications from app.list"
+  color " insapp  -> Installing the applications from ~/.bash/.install/app.list"
   color " extract -> Extract every archive"
   color " mtar    -> Make a new tar file"
   color " mzip    -> Make a new zip file"
