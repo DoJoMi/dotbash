@@ -49,9 +49,7 @@ remove(){
 	pause 'Press [Enter] key to continue...'
 	rm -rf $HOME/.bash 
 	rm $HOME/.bashrc
-	rm $HOME/setup.sh	
 	mv $HOME/.bashrc.bak $HOME/.bashrc
-	color "Thank you for using....Have a nice day =)"
 }
 
 while getopts "ir" opt; do
