@@ -19,7 +19,7 @@ pause(){
 }
 
 install() {
-	if [ -x /usr/bin/git || -x /usr/local/bin/git ];
+	if [ -x /usr/bin/git ] || [ -x /usr/local/bin/git ];
 	then 
 		echo ""
 		color " --> Git installed, perfect..."
