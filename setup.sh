@@ -14,7 +14,7 @@ color() {
 	printf '\033[0;31m%s\033[0m\n' "$1"
 }
 
-function pause(){
+pause(){
    read -p "$*"
 }
 
