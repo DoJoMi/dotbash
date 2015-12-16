@@ -13,21 +13,23 @@ function show(){
   echo "BASHRC FUNCTIONS:"
   echo " "
   color " insapp    -> Installing the applications from ~/.bash/.install/app.list"
-  color " dnf_clean -> clean all dnf"
+  color " dnf_fresh -> new dnf"
   echo " "
 }
 
 
 #install all application from app.list
 function insapp(){
-	echo "$(tput setaf 1)Installing the packages from app.list file..$(tput sgr0)" && cat $HOME/.bash/.install/app.list | xargs sudo yum -y install
+	echo "$(tput setaf 1)Installing the packages from app.list file..$(tput sgr0)" sudo yum update -y && cat $HOME/.bash/.install/app.list | xargs sudo yum -y install
 }
 
 #dnf startup
-function dnf_clean(){
- su -c 'dnf clean all'
- su -c 'dnf repolist'
- su -c 'dnf upgrade'
+function dnf_fresh(){
+ sudo yum -y install dnf
+ sudo yum -y remove epel-release
+ sudo dnf clean all
+ sudo dnf repolist
+ sudo dnf upgrade
 }
 
 
