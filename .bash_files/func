@@ -12,14 +12,15 @@ function show(){
   echo " "
   echo "BASHRC FUNCTIONS:"
   echo " "
-  color " insapp  -> Installing the applications from ~/.bash/.install/app.list"
+  color " insapp    -> Installing the applications from ~/.bash/.install/app.list"
+  color " dnf_clean -> clean all dnf"
   echo " "
 }
 
 
 #install all application from app.list
 function insapp(){
-	echo "$(tput setaf 1)Installing the packages from app.list file..$(tput sgr0)" && cat ~/.install/app.list | xargs sudo yum -y install
+	echo "$(tput setaf 1)Installing the packages from app.list file..$(tput sgr0)" && cat $HOME/.bash/.install/app.list | xargs sudo yum -y install
 }
 
 #dnf startup
