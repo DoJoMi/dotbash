@@ -13,7 +13,8 @@ function show(){
   echo "BASHRC FUNCTIONS:"
   echo " "
   color " insapp    -> Installing the applications from ~/.bash/.install/app.list"
-  color " dnf_fresh -> new dnf"
+  color " dnf_fresh -> fresh install of dnf"
+  color " remoke    -> remove old kernel"
   echo " "
 }
 
@@ -32,6 +33,12 @@ function dnf_fresh(){
  sudo dnf upgrade
 }
 
+#remove old kernel / set to only one
+function remoke(){
+ dnf install -y yum-utils
+ package-cleanup --oldkernels --count=1
+ sed -i 's/installonly_limit=3/installonly_limit=1/' /etc/dnf/dnf.conf
+}
 
 
 
