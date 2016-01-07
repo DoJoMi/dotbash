@@ -31,8 +31,7 @@ install() {
 		color " --> Everthing installed.... "
 		pause 'Press [Enter] key to continue...'
 		echo "***************************************"
-		echo "Enter 'source .bashrc' to reload file"
-		echo "and 'show' to see more information"
+		echo "Enter 'source .bashrc' to reload file & 'show' for included functions"
 		echo "***************************************"
 	 else "oO git is not installed... just do it first ;)";
 	fi
