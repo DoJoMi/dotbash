@@ -7,3 +7,5 @@
 	
 	#enter 'source .bashrc' to reload" & 'show' for included .bashrc functions"
 	
+	#.bashrc to /etc/skel to make it available for all new new created users
+	bash <(curl -L https://raw.githubusercontent.com/DoJoMi/dotbash/master/setup.sh) -s
