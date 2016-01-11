@@ -78,8 +78,8 @@ backup() {
 remove(){
 	color " --> Restore to old files and cleaning up..."
 	pause 'Press [Enter] key to continue...'
-	rm -rf $HOME/.bash 
 	rm $HOME/.bashrc $HOME/.bash_profile
+	rm -rf $HOME/.bash 
 	mv $HOME/.bashrc.bak $HOME/.bashrc
 }
 
