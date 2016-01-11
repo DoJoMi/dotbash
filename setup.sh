@@ -27,6 +27,7 @@ install() {
 		  if [ -d "$HOME/.bash" ]; then
    			color " --> Directory exists no fresh cloning..."
 			ln -s $HOME/.bash/.bashrc $HOME/.bashrc
+			ln -s $HOME/.bash/.bash_profile $HOME/.bash_profile
 			rm -rf $HOME/.bash/.git
 			pause 'Press [Enter] key to continue...'
 			echo "***************************************"
@@ -35,6 +36,7 @@ install() {
 		  else
 			git clone https://github.com/DoJoMi/dotbash.git $HOME/.bash
 			ln -s $HOME/.bash/.bashrc $HOME/.bashrc
+			ln -s $HOME/.bash/.bash_profile $HOME/.bash_profile
 			rm -rf $HOME/.bash/.git
 			pause 'Press [Enter] key to continue...'
 			echo "***************************************"
