@@ -79,7 +79,7 @@ remove(){
 	color " --> Restore to old files and cleaning up..."
 	pause 'Press [Enter] key to continue...'
 	rm -rf $HOME/.bash 
-	rm $HOME/.bashrc
+	rm $HOME/.bashrc $HOME/.bash_profile
 	mv $HOME/.bashrc.bak $HOME/.bashrc
 }
 
