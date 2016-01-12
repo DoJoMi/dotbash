@@ -72,6 +72,7 @@ skel(){
 
 backup() {
 	mv $HOME/.bashrc $HOME/.bashrc.bak
+	mv $HOME/.bash_profile $HOME/.bash_profile.bak
 }
 
 
@@ -81,6 +82,7 @@ remove(){
 	rm $HOME/.bashrc $HOME/.bash_profile
 	rm -rf $HOME/.bash 
 	mv $HOME/.bashrc.bak $HOME/.bashrc
+	mv $HOME/.bash_profile.bak $HOME/.bash_profile
 }
 
 while getopts "isr" opt; do
