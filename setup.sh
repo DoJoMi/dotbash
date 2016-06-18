@@ -28,6 +28,7 @@ install() {
    			color " --> Directory exists no fresh cloning..."
 			ln -s $HOME/.bash/.bashrc $HOME/.bashrc
 			ln -s $HOME/.bash/.bash_profile $HOME/.bash_profile
+			ln -s $HOME/.bash/git-prompt.sh $HOME/.git-prompt
 			rm -rf $HOME/.bash/.git
 			pause 'Press [Enter] key to continue...'
 			echo "***************************************"
@@ -35,8 +36,10 @@ install() {
 			echo "***************************************"
 		  else
 			git clone https://github.com/DoJoMi/dotbash.git $HOME/.bash
+			curl -OL https://raw.github.com/git/git/master/contrib/completion/git-prompt.sh $HOME/.bash
 			ln -s $HOME/.bash/.bashrc $HOME/.bashrc
 			ln -s $HOME/.bash/.bash_profile $HOME/.bash_profile
+			ln -s $HOME/.bash/git-prompt.sh $HOME/.git-prompt
 			rm -rf $HOME/.bash/.git
 			pause 'Press [Enter] key to continue...'
 			echo "***************************************"
