@@ -36,7 +36,7 @@ install() {
 			echo "***************************************"
 		  else
 			git clone https://github.com/DoJoMi/dotbash.git $HOME/.bash
-			curl -OL https://raw.github.com/git/git/master/contrib/completion/git-prompt.sh $HOME/.bash
+			curl -L https://raw.github.com/git/git/master/contrib/completion/git-prompt.sh > $HOME/.bash/git-prompt.sh
 			ln -s $HOME/.bash/.bashrc $HOME/.bashrc
 			ln -s $HOME/.bash/.bash_profile $HOME/.bash_profile
 			ln -s $HOME/.bash/git-prompt.sh $HOME/.git-prompt
