@@ -1,3 +1,3 @@
-[ -f ~/.bashrc ] && source ~/.bash_git
+[ -f ~/.git-prompt ] && source ~/.git-prompt
 [ -f ~/.bashrc ] && source ~/.bashrc
 [ -f ~/.profile ] && source ~/.profile
