@@ -13,4 +13,7 @@ for file in $HOME/.bash/.bash_files/*; do
   source "$file"
 done
 
+#load external git-prompt
+source ~/.git-prompt
+
 
