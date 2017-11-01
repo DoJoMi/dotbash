@@ -1,2 +1,4 @@
 net-tools
 epel-release
+bind-utils
+telnet
